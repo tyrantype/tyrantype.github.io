@@ -1,0 +1,1 @@
+# tyrantype.github.io
