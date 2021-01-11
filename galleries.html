@@ -37,18 +37,19 @@
         </header>
         <br><br>
         <article class="flex-logo">
-            <img title="Alestorm"  src="style/Deathmetal-and-beyond/Alestorm.png" alt="Logo">
-            <img title="Bosedeath"  src="style/Deathmetal-and-beyond/Bosedeath.png" alt="Logo">
-            <img title="Coprocephalic"  src="style/Deathmetal-and-beyond/Coprocephalic.png" alt="Logo">
-            <img title=""  src="style/Deathmetal-and-beyond/Disentomb.png" alt="Logo">
-            <img title=""  src="style/Deathmetal-and-beyond/Fvlfilled-Propechy.png" alt="Logo">
-            <img title=""  src="style/Deathmetal-and-beyond/Homeless-Slam.png" alt="Logo">
-            <img title=""  src="style/Deathmetal-and-beyond/Magistricide.png" alt="Logo">
-            <img title=""  src="style/Deathmetal-and-beyond/Man Made God.png" alt="Logo">
-            <img title=""  src="style/Deathmetal-and-beyond/Niraya.png" alt="Logo">
-            <img title=""  src="style/Deathmetal-and-beyond/shrapnel-shell.svg" alt="Logo">
-            <img title=""  src="style/Deathmetal-and-beyond/Sorrovvv.svg" alt="Logo">
-            <img title=""  src="style/Deathmetal-and-beyond/Visceral Disgorge Revamp.png" alt="Logo">
+            <img title="Alestorm"  src="style/Deathmetal-and-beyond/Alestorm.png" alt="Logo"onclick="openModal();currentSlide(1)">
+            <img title="Bosedeath"  src="style/Deathmetal-and-beyond/Bosedeath.png" alt="Logo" onclick="openModal();currentSlide(2)">
+            <img title="Coprocephalic"  src="style/Deathmetal-and-beyond/Coprocephalic.png" alt="Logo" onclick="openModal();currentSlide(3)">
+            <img title=""  src="style/Deathmetal-and-beyond/Disentomb.png" alt="Logo" onclick="openModal();currentSlide(4)">
+            <img title=""  src="style/Deathmetal-and-beyond/Fvlfilled-Propechy.png" alt="Logo" onclick="openModal();currentSlide(5)">
+            <img title=""  src="style/Deathmetal-and-beyond/Homeless-Slam.png" alt="Logo" onclick="openModal();currentSlide(6)">
+            <img title=""  src="style/Deathmetal-and-beyond/Magistricide.png" alt="Logo" onclick="openModal();currentSlide(7)">
+            <img title=""  src="style/Deathmetal-and-beyond/Man Made God.png" alt="Logo" onclick="openModal();currentSlide(8)">
+            <img title=""  src="style/Deathmetal-and-beyond/Niraya.png" alt="Logo" onclick="openModal();currentSlide(9)">
+            <img title=""  src="style/Deathmetal-and-beyond/shrapnel-shell.svg" alt="Logo" onclick="openModal();currentSlide(10)">
+            <img title=""  src="style/Deathmetal-and-beyond/Sorrovvv.svg" alt="Logo" onclick="openModal();currentSlide(11)">
+            <img title=""  src="style/Deathmetal-and-beyond/Visceral Disgorge Revamp.png" alt="Logo" onclick="openModal();currentSlide(12)">
+        </article>
     </section>
 
     <section id="Tech-y">
@@ -140,6 +141,101 @@
         <a href="index.html"><img title="" style="height: 80px; filter: invert(70%);" src="style/Tyrant_plain.svg" alt="Tyrant"></a>
         <br>©2021 
     </footer>
+
+    <!-- Modal Lighbox -->
+    <div id="myModal" class="modal">
+        <!-- <span class="close cursor" onclick="closeModal()">&times;</span> -->
+        <div class="modal-content">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            
+            <!-- Death Metal And Beyond -->
+            <div class="mySlides">
+                <img title="" src="style/Deathmetal-and-beyond/Alestorm.png" style="width:100%">
+                    <p id="caption">Test</p>
+            </div>
+            <div class="mySlides">
+                <img title="Bosedeath"  src="style/Deathmetal-and-beyond/Bosedeath.png" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img title="Coprocephalic"  src="style/Deathmetal-and-beyond/Coprocephalic.png" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img title="Disentomb"  src="style/Deathmetal-and-beyond/Disentomb.png" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img title="Fvlfilled-Propechy"  src="style/Deathmetal-and-beyond/Fvlfilled-Propechy.png" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img title="Homeless-Slam" src="style/Deathmetal-and-beyond/Homeless-Slam.png" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img title="Magistricide"  src="style/Deathmetal-and-beyond/Magistricide.png" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img title="Man Made God"  src="style/Deathmetal-and-beyond/Man Made God.png" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img title="Niraya" src="style/Deathmetal-and-beyond/Niraya.png" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img title="shrapnel-shell"  src="style/Deathmetal-and-beyond/shrapnel-shell.svg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img title="Sorrovv"  src="style/Deathmetal-and-beyond/Sorrovvv.svg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img title="Visceral Disgorge" src="style/Deathmetal-and-beyond/Visceral Disgorge Revamp.png" style="width:100%">
+            </div>
+
+            <!--  -->
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+        document.getElementById("myModal").style.display = "block";
+        }
+    
+        function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+        }
+    
+        var slideIndex = 1;
+        showSlides(slideIndex);
+    
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+    
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+    
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+    </script>
 </body>
 
 </html>
