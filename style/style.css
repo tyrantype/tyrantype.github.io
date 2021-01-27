@@ -107,6 +107,13 @@ h1{
 #profile{
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
+    transition: 0.3s ease-in;
+    max-height: 340px;
+}
+#profile:hover{
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+    transition: 0.3s ease-out;
     max-height: 340px;
 }
 #tagline{
