@@ -116,7 +116,7 @@ h1{
     max-height: 340px;
 }
 #profile:hover{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 15px 15px 0 #000000;
     -webkit-filter: grayscale(0);
     filter: grayscale(0);
     transition: 0.3s ease-out;

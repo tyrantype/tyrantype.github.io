@@ -56,21 +56,22 @@
                         <br><br>
                         These are some of the names I've worked with : 
                         <ul class="list">
-                            <li>Lorem Ipsum</li>
-                            <li>Lorem Ipsum</li>
-                            <li>Lorem Ipsum</li>
-                            <li>Lorem Ipsum</li>
+                            <li>Disentomb</li>
+                            <li>Analepsy</li>
+                            <li>Revenge The Fate</li>
+                            <li>Bosedeath</li>
+                            <li>And many more...</li>
                         </ul>
                     </p>
                 </div>
             </article>
             <article class="flex-logo">
-                <img title="Alestorm" id="logo" src="style/deathmetal-and-beyond/Alestorm.png" alt="Logo">
-                <img title="shrapnel Shell" id="logo" src="style/deathmetal-and-beyond/shrapnel-shell.svg" alt="Logo">
-                <img title="Niraya" id="logo" src="style/deathmetal-and-beyond/Niraya.png" alt="Logo">
-                <img title="Homeless Slam" id="logo" src="style/deathmetal-and-beyond/Homeless-Slam.png" alt="Logo"> 
-                <img title="Fvlfilled Propechy" id="logo" src="style/deathmetal-and-beyond/Fvlfilled-Propechy.png" alt="Logo"> 
-                <img title="" id="logo" src="style/Futuristic/Diagnosis-Metodical.png" alt="Logo">
+                <img title="Alestorm" id="logo" src="style/deathmetal-and-beyond/Alestorm.png" alt="Logo" onclick="openModal();currentSlide(1)">
+                <img title="shrapnel Shell" id="logo" src="style/deathmetal-and-beyond/shrapnel-shell.svg" alt="Logo" onclick="openModal();currentSlide(2)">
+                <img title="Niraya" id="logo" src="style/deathmetal-and-beyond/Niraya.png" alt="Logo" onclick="openModal();currentSlide(3)">
+                <img title="Homeless Slam" id="logo" src="style/deathmetal-and-beyond/Homeless-Slam.png" alt="Logo" onclick="openModal();currentSlide(4)"> 
+                <img title="Fvlfilled Propechy" id="logo" src="style/deathmetal-and-beyond/Fvlfilled-Propechy.png" alt="Logo" onclick="openModal();currentSlide(5)"> 
+                <img title="" id="logo" src="style/Futuristic/Diagnosis-Metodical.png" alt="Logo" onclick="openModal();currentSlide(6)">
             </article>
             <p style="text-align: center; margin-top: 20px;">
                 <a class="cta-more" href="galleries.html">More logos</a>
@@ -142,5 +143,81 @@
             <br>©2021
             
         </footer>
+         <!-- Modal Lighbox -->
+    <div id="myModal" class="modal">
+        <!-- <span class="close cursor" onclick="closeModal()">&times;</span> -->
+        <div class="modal-content">
+            <a class="close" onclick="closeModal()" onkeydown="closeModalesc()">&times;</a>
+            <!-- Other  -->
+            <div class="mySlides">
+                <img title="D'vorah" src="style/Deathmetal-and-beyond/Alestorm.png" alt="Logo" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img title="shrapnel Shell" src="style/Deathmetal-and-beyond/shrapnel-shell.svg" class="svg" alt="Logo" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img title="Niraya" src="style/Deathmetal-and-beyond/Niraya.png" alt="Logo" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img title="Homeless Slam" src="style/Deathmetal-and-beyond/Homeless-Slam.png"  alt="Logo" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img title="Fvlfilled Propechy" src="style/Deathmetal-and-beyond/Fvlfilled-Propechy.png"  alt="Logo" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img title="Diagnosis-Metodical" src="style/Futuristic/Diagnosis-Metodical.png" alt="Logo" style="width:100%">
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+        document.getElementById("myModal").style.display = "block";
+        }
+    
+        function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+        }
+
+        // function closeModalesc() {
+        //     document.onkeydown = function (evt) {
+        //     if (evt.keyCode == 27) {
+        //             document.getElementById("myModal").style.display = "none";
+        //         }
+        //     } belum jadi
+        // }
+    
+        var slideIndex = 1;
+        showSlides(slideIndex);
+    
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+    
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+    
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+    </script>
     </body>
 </html>
